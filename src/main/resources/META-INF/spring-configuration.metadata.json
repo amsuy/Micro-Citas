@@ -1,0 +1,17 @@
+{
+    "groups": [],
+    "properties": [
+      {
+        "name": "jwt.secret",
+        "type": "java.lang.String",
+        "description": "Clave secreta para JWT"
+      },
+      {
+        "name": "jwt.expiration",
+        "type": "java.lang.Long",
+        "description": "Tiempo de expiración del token JWT"
+      }
+    ],
+    "hints": []
+  }
+  
