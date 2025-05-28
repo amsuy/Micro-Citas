@@ -31,8 +31,12 @@ public class CitaProgramadaServicio {
     @Autowired
     private EmailPdfService emailPdfService;
 
-    private final String URL_PACIENTE = "http://localhost:9090/api/paciente/";
-    private final String URL_DOCTOR = "http://localhost:9191/api/doctor/";
+   @Value("${paciente.service.url}")
+private String URL_PACIENTE;
+
+@Value("${doctor.service.url}")
+private String URL_DOCTOR;
+
 
     public CitaProgramada crearCita(CitaProgramadaDTO citaDTO) {
         PacienteDTO[] pacientes = restTemplate.getForObject(URL_PACIENTE + "buscar/nit/" + citaDTO.getNit(),
